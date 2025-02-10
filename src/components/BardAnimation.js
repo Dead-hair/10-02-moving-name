@@ -7,7 +7,7 @@ const MovingText = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
 
-    const text = 'Амина'; // Ваше имя
+    const text = 'Amina'; // Ваше имя
     let x = 50; // Начальная позиция по оси X
     let y = 50; // Начальная позиция по оси Y
     let dx = 2; // Скорость движения по оси X
@@ -18,12 +18,13 @@ const MovingText = () => {
     canvas.height = window.innerHeight;
 
     const draw = () => {
-      // Очищаем канвас на каждом кадре
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Очищаем канвас на каждом кадре и устанавливаем цвет фона
+      ctx.fillStyle = '#a9cce3'; // Цвет фона 
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Устанавливаем стиль текста
       ctx.font = '48px Arial';
-      ctx.fillStyle = 'green'; // Цвет текста
+      ctx.fillStyle = '#2c3e50'; // Цвет текста
 
       // Рисуем текст
       ctx.fillText(text, x, y);
